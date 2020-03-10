@@ -4,14 +4,17 @@ namespace App\Patterns\Adapter;
 
 class BookAdapter
 {
+    /**
+     * @var SimpleBook
+     */
     private $book;
 
-    function __construct(SimpleBook $book_in)
+    function __construct(SimpleBook $book)
     {
-        $this->book = $book_in;
+        $this->book = $book;
     }
 
-    function getAuthorAndTitle()
+    function getAuthorAndTitle(): string
     {
         return $this->book->getTitle() . ' by ' . $this->book->getAuthor();
     }
