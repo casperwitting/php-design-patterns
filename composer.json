@@ -1,7 +1,7 @@
 {
     "name": "casper/design-patterns",
     "require": {
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^8.0"
     },
     "autoload": {
         "psr-4": {
