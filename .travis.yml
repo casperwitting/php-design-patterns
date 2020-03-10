@@ -15,3 +15,5 @@ before_script:
 
 script:
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_success: coveralls
