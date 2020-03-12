@@ -15,10 +15,10 @@ class AbstractFactoryTest extends TestCase
 
         $desktopComputer = $computerFactory->makeDesktopComputer();
 
-        $mac = $desktopComputer->makeMac(1987);
+        $mac = $desktopComputer->makeMac();
 
-        $this->assertEquals('Macintosh SE', $mac->getModel());
-        $this->assertEquals(1024, $mac->getKiloBytesOfRam());
+        $this->assertEquals('iMac G3', $mac->getModel());
+        $this->assertEquals(32000, $mac->getKiloBytesOfRam());
     }
 
     public function testMakingAppleLaptop()
@@ -27,13 +27,61 @@ class AbstractFactoryTest extends TestCase
 
         $desktopComputer = $computerFactory->makeLaptopComputer();
 
-        $mac = $desktopComputer->makeMacBook(2015);
+        $mac = $desktopComputer->makeMacBook();
 
-        $this->assertEquals('MacBook Pro 2015', $mac->getModel());
-        $this->assertEquals(8000000, $mac->getKiloBytesOfRam());
+        $this->assertEquals('MacBook Pro 2019', $mac->getModel());
+        $this->assertEquals(16000000, $mac->getKiloBytesOfRam());
     }
 
     public function testMakingIbmDesktop()
+    {
+        $computerFactory = new IbmComputerFactory();
+
+        $desktopComputer = $computerFactory->makeDesktopComputer();
+
+        $mac = $desktopComputer->makePc();
+
+        $this->assertEquals('Dell Precision 3630', $mac->getModel());
+        $this->assertEquals(8000000, $mac->getKiloBytesOfRam());
+    }
+
+    public function testMakingIbmLaptop()
+    {
+        $computerFactory = new IbmComputerFactory();
+
+        $desktopComputer = $computerFactory->makeLaptopComputer();
+
+        $mac = $desktopComputer->makeLaptop();
+
+        $this->assertEquals('ThinkPad X1 Carbon', $mac->getModel());
+        $this->assertEquals(8000000, $mac->getKiloBytesOfRam());
+    }
+
+    public function testMakingAppleDesktopForSpecifiedYear()
+    {
+        $computerFactory = new AppleComputerFactory();
+
+        $desktopComputer = $computerFactory->makeDesktopComputer();
+
+        $mac = $desktopComputer->makeMac(1987);
+
+        $this->assertEquals('Macintosh SE', $mac->getModel());
+        $this->assertEquals(1024, $mac->getKiloBytesOfRam());
+    }
+
+    public function testMakingAppleLaptopForSpecifiedYear()
+    {
+        $computerFactory = new AppleComputerFactory();
+
+        $desktopComputer = $computerFactory->makeLaptopComputer();
+
+        $mac = $desktopComputer->makeMacBook(1991);
+
+        $this->assertEquals('PowerBook', $mac->getModel());
+        $this->assertEquals(2048, $mac->getKiloBytesOfRam());
+    }
+
+    public function testMakingIbmDesktopForSpecifiedYear()
     {
         $computerFactory = new IbmComputerFactory();
 
@@ -45,15 +93,15 @@ class AbstractFactoryTest extends TestCase
         $this->assertEquals(512, $mac->getKiloBytesOfRam());
     }
 
-    public function testMakingIbmLaptop()
+    public function testMakingIbmLaptopForSpecifiedYear()
     {
         $computerFactory = new IbmComputerFactory();
 
         $desktopComputer = $computerFactory->makeLaptopComputer();
 
-        $mac = $desktopComputer->makeLaptop(2015);
+        $mac = $desktopComputer->makeLaptop(2013);
 
-        $this->assertEquals('ThinkPad X1 Carbon', $mac->getModel());
-        $this->assertEquals(8000000, $mac->getKiloBytesOfRam());
+        $this->assertEquals('ThinkPad Yoga', $mac->getModel());
+        $this->assertEquals(4000000, $mac->getKiloBytesOfRam());
     }
 }

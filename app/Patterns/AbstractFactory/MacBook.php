@@ -13,10 +13,6 @@ class MacBook extends AbstractLaptop
                 $this->model = 'PowerBook';
                 $this->kiloBytesOfRam = 2048;
                 break;
-            case 2015:
-                $this->model = 'MacBook Pro 2015';
-                $this->kiloBytesOfRam = 8000000;
-                break;
             default:
                 $this->model = 'MacBook Pro 2019';
                 $this->kiloBytesOfRam = 16000000;
