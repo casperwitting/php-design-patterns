@@ -4,7 +4,8 @@ namespace App\Patterns\AbstractFactory;
 
 abstract class AbstractComputerFactory
 {
-    abstract function makeDesktop();
+    abstract function makeDesktopComputer();
 
-    abstract function makeLaptop();
+    abstract function makeLaptopComputer();
 }
+
