@@ -3,8 +3,6 @@
 
 namespace Unit;
 
-
-use App\Patterns\Builder\JsonResponse;
 use App\Patterns\Builder\JsonResponseBuilder;
 use App\Patterns\Builder\JsonResponseBuilderDirector;
 use PHPUnit\Framework\TestCase;
@@ -29,8 +27,6 @@ class BuilderTest extends TestCase
 
         $builderDirector = new JsonResponseBuilderDirector($builder);
         $builderDirector->BuildResponse();
-
-        /** @var JsonResponse $response */
         $response = $builderDirector->getResponse();
 
         $this->assertEquals([
@@ -51,6 +47,5 @@ class BuilderTest extends TestCase
                 'total' => 2
             ]
         ], $response->getJson());
-
     }
 }
