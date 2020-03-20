@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Patterns\Bridge;
-
 
 class EmployeeAverageSalaryCalculator extends AverageSalaryCalculator
 {

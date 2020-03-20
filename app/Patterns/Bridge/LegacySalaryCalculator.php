@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Patterns\Bridge;
 
 class LegacySalaryCalculator
@@ -9,7 +8,6 @@ class LegacySalaryCalculator
      * @var int
      */
     private $hourlyPay;
-
     /**
      * @var FreelanceAverageSalaryCalculator|EmployeeAverageSalaryCalculator
      */

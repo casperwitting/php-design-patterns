@@ -9,12 +9,12 @@ class BookAdapter
      */
     private $book;
 
-    function __construct(SimpleBook $book)
+    public function __construct(SimpleBook $book)
     {
         $this->book = $book;
     }
 
-    function getAuthorAndTitle(): string
+    public function getAuthorAndTitle(): string
     {
         return $this->book->getTitle() . ' by ' . $this->book->getAuthor();
     }

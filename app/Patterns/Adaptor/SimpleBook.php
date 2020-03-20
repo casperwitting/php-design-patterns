@@ -13,18 +13,18 @@ class SimpleBook
      */
     private $title;
 
-    function __construct(string $author, string $title)
+    public function __construct(string $author, string $title)
     {
         $this->author = $author;
         $this->title = $title;
     }
 
-    function getAuthor(): string
+    public function getAuthor(): string
     {
         return $this->author;
     }
 
-    function getTitle(): string
+    public function getTitle(): string
     {
         return $this->title;
     }

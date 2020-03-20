@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Patterns\Builder;
-
 
 class JsonResponseBuilderDirector extends AbstractResponseDirector
 {

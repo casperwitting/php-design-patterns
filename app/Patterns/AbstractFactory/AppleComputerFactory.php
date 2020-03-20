@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Patterns\AbstractFactory;
-
 
 class AppleComputerFactory extends AbstractComputerFactory
 {

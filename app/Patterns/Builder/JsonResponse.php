@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Patterns\Builder;
 
 class JsonResponse
@@ -36,7 +35,7 @@ class JsonResponse
     {
         $this->response['meta'] = [
             'perPage' => $this->perPage,
-            'total' => count($this->data)
+            'total' => count($this->data),
         ];
 
         $this->response['data'] = $this->data;

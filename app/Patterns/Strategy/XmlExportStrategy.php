@@ -13,8 +13,8 @@ class XmlExportStrategy implements ExportStrategyInterface
     }
 
     /**
-     * @param      $mixed
-     * @param DOMElement $domElement
+     * @param             $mixed
+     * @param DOMElement  $domElement
      * @param DOMDocument $DOMDocument
      * @return string
      */
@@ -37,8 +37,8 @@ class XmlExportStrategy implements ExportStrategyInterface
     }
 
     /**
-     * @param $mixed
-     * @param DOMElement $domElement
+     * @param             $mixed
+     * @param DOMElement  $domElement
      * @param DOMDocument $DOMDocument
      */
     private function encodeArray($mixed, $domElement, $DOMDocument): void
