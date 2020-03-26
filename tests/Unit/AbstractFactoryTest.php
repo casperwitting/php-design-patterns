@@ -25,9 +25,9 @@ class AbstractFactoryTest extends TestCase
     {
         $computerFactory = new AppleComputerFactory();
 
-        $desktopComputer = $computerFactory->makeLaptopComputer();
+        $laptopComputer = $computerFactory->makeLaptopComputer();
 
-        $mac = $desktopComputer->makeMacBook();
+        $mac = $laptopComputer->makeMacBook();
 
         $this->assertEquals('MacBook Pro 2019', $mac->getModel());
         $this->assertEquals(16000000, $mac->getKiloBytesOfRam());
@@ -49,9 +49,9 @@ class AbstractFactoryTest extends TestCase
     {
         $computerFactory = new IbmComputerFactory();
 
-        $desktopComputer = $computerFactory->makeLaptopComputer();
+        $laptopComputer = $computerFactory->makeLaptopComputer();
 
-        $mac = $desktopComputer->makeLaptop();
+        $mac = $laptopComputer->makeLaptop();
 
         $this->assertEquals('ThinkPad X1 Carbon', $mac->getModel());
         $this->assertEquals(8000000, $mac->getKiloBytesOfRam());
@@ -73,9 +73,9 @@ class AbstractFactoryTest extends TestCase
     {
         $computerFactory = new AppleComputerFactory();
 
-        $desktopComputer = $computerFactory->makeLaptopComputer();
+        $laptopComputer = $computerFactory->makeLaptopComputer();
 
-        $mac = $desktopComputer->makeMacBook(1991);
+        $mac = $laptopComputer->makeMacBook(1991);
 
         $this->assertEquals('PowerBook', $mac->getModel());
         $this->assertEquals(2048, $mac->getKiloBytesOfRam());
@@ -97,9 +97,9 @@ class AbstractFactoryTest extends TestCase
     {
         $computerFactory = new IbmComputerFactory();
 
-        $desktopComputer = $computerFactory->makeLaptopComputer();
+        $laptopComputer = $computerFactory->makeLaptopComputer();
 
-        $mac = $desktopComputer->makeLaptop(2013);
+        $mac = $laptopComputer->makeLaptop(2013);
 
         $this->assertEquals('ThinkPad Yoga', $mac->getModel());
         $this->assertEquals(4000000, $mac->getKiloBytesOfRam());
