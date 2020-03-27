@@ -1,8 +1,7 @@
 {
   "name": "casper/design-patterns",
   "require-dev": {
-    "phpunit/phpunit": "^8.0",
-    "ext-cassandra": "*"
+    "phpunit/phpunit": "^8.0"
   },
   "autoload": {
     "psr-4": {
