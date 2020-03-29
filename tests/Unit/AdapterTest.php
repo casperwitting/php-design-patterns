@@ -2,17 +2,17 @@
 
 namespace Tests\Unit;
 
-use App\Patterns\Adapter\BookAdapter;
-use App\Patterns\Adapter\SimpleBook;
+use App\Patterns\Adaptor\Book;
+use App\Patterns\Adaptor\BookAdaptor;
 use PHPUnit\Framework\TestCase;
 
 class AdapterTest extends TestCase
 {
     public function testThis()
     {
-        $book = new SimpleBook('Uncle Bob', 'Design Patterns');
+        $book = new Book('Uncle Bob', 'Design Patterns');
 
-        $bookAdapter = new BookAdapter($book);
+        $bookAdapter = new BookAdaptor($book);
 
         $this->assertEquals('Design Patterns by Uncle Bob', $bookAdapter->getAuthorAndTitle());
     }

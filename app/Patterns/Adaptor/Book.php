@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Patterns\Adapter;
+namespace App\Patterns\Adaptor;
 
-class SimpleBook
+class Book
 {
     /**
      * @var string

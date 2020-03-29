@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Patterns\Adapter;
+namespace App\Patterns\Adaptor;
 
-class BookAdapter
+class BookAdaptor
 {
     /**
-     * @var SimpleBook
+     * @var Book
      */
     private $book;
 
-    public function __construct(SimpleBook $book)
+    public function __construct(Book $book)
     {
         $this->book = $book;
     }
